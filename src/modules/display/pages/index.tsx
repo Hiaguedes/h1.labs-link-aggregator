@@ -4,7 +4,7 @@ import Card from '../components/Card/card.component'
 import Button from '../components/Button/button.component'
 
 import { ButtonsWrapper } from './style'
-import useMatchMedia from '../../../hooks/useMatchMedia'
+// import useMatchMedia from '../../../hooks/useMatchMedia'
 
 const DisplayPage = () => {
     // const tablet = useMatchMedia('(min-width: 768px)');
