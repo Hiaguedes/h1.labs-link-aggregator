@@ -7,8 +7,8 @@ import { ButtonsWrapper } from './style'
 import useMatchMedia from '../../../hooks/useMatchMedia'
 
 const DisplayPage = () => {
-    const tablet = useMatchMedia('(min-width: 768px)');
-    const mobile = useMatchMedia('(min-width: 300px)');
+    // const tablet = useMatchMedia('(min-width: 768px)');
+    // const mobile = useMatchMedia('(min-width: 300px)');
     const [show, setShow] = React.useState(false)
 
     React.useEffect(() => {
@@ -22,7 +22,7 @@ const DisplayPage = () => {
         <head>
             <title>Hiago Guedes - Redes Sociais</title>
         </head>
-        <div style={{ width: '80vw', display: 'flex', flexDirection: 'column', alignItems: "center" }}>
+        <div style={{ width: '80vw', maxWidth: '60rem', display: 'flex', flexDirection: 'column', alignItems: "center" }}>
             <Card name="Hiago Guedes" description="Brasil, Rio de Janeiro, Petrópolis"/>
         <ButtonsWrapper show={show}>
             <Button variant="twitter" to="https://twitter.com/hiaguedes"/>
