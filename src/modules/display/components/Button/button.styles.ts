@@ -13,7 +13,7 @@ const ButtonContainer = styled.div<ButtonProps>`
 
     :hover {
         opacity: 0.9;
-        outline: 3px solid red;
+        outline: 1px solid #e9e9e9;
     }
 
     :after {

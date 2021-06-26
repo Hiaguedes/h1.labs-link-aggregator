@@ -1,18 +1,17 @@
-import { HTMLAttributes } from 'react'
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 
-interface ButtonWrapperProps extends HTMLAttributes<HTMLDivElement> {
-    show: boolean;
-}
+// interface ButtonWrapperProps extends HTMLAttributes<HTMLDivElement> {
+//     show: boolean;
+// }
 
-export const ButtonsWrapper = styled.div<ButtonWrapperProps>`
- padding-top: 1rem;
- width: 95%;
- max-width: 200rem;
+export const ButtonsWrapper = styled.div`
+
  position: relative;
  max-height: 0;
- transform: max-height 5s ease-out;
+ height: 0;
  overflow: hidden;
+ width: 95%;
+ max-width: 200rem;
 
  :before {
         display: inline-block;
@@ -24,9 +23,19 @@ export const ButtonsWrapper = styled.div<ButtonWrapperProps>`
         position: absolute;
     }
 
-    ${({ show }) => show && css`
+ @keyframes showContent {
+     0%{
+         max-height: 0;
+         height:0;
+     }
+
+     100% {
         max-height: 100%;
-        transform: max-height 5s ease-in;
-    ` }
+        height: 30rem;
+        padding-top: 1rem;
+     }
+ }
+
+ animation: showContent 1s 1s ease-in-out forwards;
 
 `;
