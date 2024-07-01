@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-// interface ButtonWrapperProps extends HTMLAttributes<HTMLDivElement> {
-//     show: boolean;
-// }
-
 export const ButtonsWrapper = styled.div`
 
  position: relative;
@@ -18,8 +14,8 @@ export const ButtonsWrapper = styled.div`
         content: '';
         border-left: 5px dashed white;
         width: 5px;
-        height: calc(100% - 1.7rem - 2.5rem);
         left: 0;
+        top: 0;
         position: absolute;
     }
 

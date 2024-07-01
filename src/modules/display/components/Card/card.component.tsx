@@ -1,6 +1,5 @@
 import React from 'react';
-import { CardStyles } from './card.styles'
-
+import * as S from './card.styles'
 interface CardProps {
     children?: React.ReactNode;
     name: string | JSX.Element;
@@ -8,21 +7,20 @@ interface CardProps {
 }
 
 const Card = ({ children, name, description }: CardProps ) => {
-    const { CardContainer, CardSpacer, ProfileImage, UserTitle, UserBasicInfo, UserDescription } = CardStyles;
     return (
-        <CardContainer>
-        <CardSpacer>
-            <UserBasicInfo>
-                <ProfileImage />
+        <S.CardContainer>
+        <S.CardSpacer>
+            <S.UserBasicInfo>
+                <S.ProfileImage />
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <UserTitle>{name}</UserTitle>
-                    <UserDescription>{description}</UserDescription>
+                    <S.UserTitle>{name}</S.UserTitle>
+                    <S.UserDescription>{description}</S.UserDescription>
                 </div>
-            </UserBasicInfo>
+            </S.UserBasicInfo>
 
             {children}
-        </CardSpacer>
-        </CardContainer>
+        </S.CardSpacer>
+        </S.CardContainer>
     );
 }
 

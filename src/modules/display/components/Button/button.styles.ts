@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import { ButtonProps } from './button.component'
 
-const ButtonContainer = styled.div<ButtonProps>`
+export const ButtonContainer = styled.div<ButtonProps>`
+    display: inline-flex;
+    flex-direction: column;
     max-width: 200rem;
     width: 80%;
     height: 5rem;
     background-color: #f1f1f1;
-    margin-left: 19%;
+    margin-left: 20%;
     margin-bottom: 1rem;
     cursor: pointer;
     z-index: 1000;
@@ -17,12 +19,10 @@ const ButtonContainer = styled.div<ButtonProps>`
     }
 
     :after {
-        display: inline-block;
+        display: inline-flex;
         content: '';
-        margin-left: -123%;
         height: 50%;
-        width: 20%;
-        border-bottom: 5px dashed white;
+        border-bottom: 5px dashed red;
     }
 
     :before {
@@ -35,7 +35,7 @@ const ButtonContainer = styled.div<ButtonProps>`
 
 `;
 
-const ButtonContent = styled.div`
+export const ButtonContent = styled.div`
     width: 100%;
     height: 100%;
     display: inline-flex;
@@ -43,16 +43,15 @@ const ButtonContent = styled.div`
     align-items: center;
 `;
 
-const ButtonFont = styled.p`
+export const ButtonFont = styled.p`
     font-family: 'Open Sans';
     font-weight: bold;
     color: black;
 `;
 
-const ButtonIconContainer = styled.div`
+export const ButtonIconContainer = styled.div`
     width: 1.2rem;
     height: 1.2rem;
     margin-right: 1rem;
 `;
 
-export const ButtonStyles = { ButtonContainer, ButtonContent, ButtonFont, ButtonIconContainer }

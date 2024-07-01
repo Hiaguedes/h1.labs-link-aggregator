@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from 'react';
-import { ButtonStyles } from './button.styles'
+import * as S from './button.styles'
 
 import FacebookLogo from '../../components/icons/facebook.icon';
 import GithubLogo from '../../components/icons/github.icon';
@@ -25,19 +25,18 @@ const handleButtonInfo = (variant: ButtonProps['variant']) => {
 } 
 
 const Button = ({ variant, to }: ButtonProps) => {
-    const { ButtonContainer, ButtonContent, ButtonFont, ButtonIconContainer } = ButtonStyles;
     return (
         <a target="_blank" href={to} rel="noreferrer">
-        <ButtonContainer variant={variant}>
-            <ButtonContent>
+        <S.ButtonContainer variant={variant}>
+            <S.ButtonContent>
                 <div style={{ display: 'flex' }}>
-                    <ButtonIconContainer>
+                    <S.ButtonIconContainer>
                     {handleButtonInfo(variant).icon}
-                    </ButtonIconContainer>
-                    <ButtonFont>{handleButtonInfo(variant).text.toUpperCase()}</ButtonFont>
+                    </S.ButtonIconContainer>
+                    <S.ButtonFont>{handleButtonInfo(variant).text.toUpperCase()}</S.ButtonFont>
                 </div>
-            </ButtonContent>
-        </ButtonContainer>
+            </S.ButtonContent>
+        </S.ButtonContainer>
         </a>
     );
 }

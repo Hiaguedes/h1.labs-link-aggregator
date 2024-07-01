@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const CardContainer = styled.div`
+export const CardContainer = styled.div`
     width: 95%;
     max-width: 200rem;
     height: 5rem;
@@ -10,17 +10,17 @@ const CardContainer = styled.div`
     align-items: center;
 `;
 
-const CardSpacer = styled.div`
+export const CardSpacer = styled.div`
     padding: 0.5rem 1rem;
     
 `;
 
-const UserBasicInfo = styled.div`
+export const UserBasicInfo = styled.div`
     display: flex;
     align-items: center;
 `
 
-const ProfileImage = styled.div`
+export const ProfileImage = styled.div`
     width: 3rem;
     height: 3rem;
     background-color: #000;
@@ -28,16 +28,14 @@ const ProfileImage = styled.div`
     margin-right: 1rem;
 `;
 
-const UserTitle = styled.p`
+export const UserTitle = styled.p`
     color: #000;
     font-weight: bold;
     font-size: 20px;
 `;
 
-const UserDescription = styled.p`
+export const UserDescription = styled.p`
     color: #000;
     opacity: 0.6;
     font-size: 14px;
 `;
-
-export const CardStyles = { CardContainer, CardSpacer, ProfileImage, UserTitle, UserBasicInfo, UserDescription }
