@@ -2,37 +2,29 @@ import styled from 'styled-components';
 import { ButtonProps } from './button.component'
 
 export const ButtonContainer = styled.div<ButtonProps>`
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    max-width: 200rem;
-    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
     height: 5rem;
     background-color: #f1f1f1;
-    margin-left: 20%;
-    margin-bottom: 1rem;
     cursor: pointer;
     z-index: 1000;
+    width: 60vw;
 
     :hover {
         opacity: 0.9;
         outline: 1px solid #e9e9e9;
     }
 
-    :after {
-        display: inline-flex;
-        content: '';
-        height: 50%;
-        border-bottom: 5px dashed red;
-    }
+`;
 
-    :before {
-        height: 100%;
-        width: 100%;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-    }
-
+export const ButtonContentWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 `;
 
 export const ButtonContent = styled.div`
@@ -50,8 +42,8 @@ export const ButtonFont = styled.p`
 `;
 
 export const ButtonIconContainer = styled.div`
+    align-self: center;
     width: 1.2rem;
     height: 1.2rem;
-    margin-right: 1rem;
 `;
 

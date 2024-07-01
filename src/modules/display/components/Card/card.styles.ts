@@ -20,7 +20,7 @@ export const UserBasicInfo = styled.div`
     align-items: center;
 `
 
-export const ProfileImage = styled.div`
+export const ProfileImage = styled.img`
     width: 3rem;
     height: 3rem;
     background-color: #000;

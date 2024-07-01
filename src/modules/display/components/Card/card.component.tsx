@@ -4,14 +4,15 @@ interface CardProps {
     children?: React.ReactNode;
     name: string | JSX.Element;
     description?: string | JSX.Element;
+    src?: string;
 }
 
-const Card = ({ children, name, description }: CardProps ) => {
+const Card = ({ children, name, description, src }: CardProps ) => {
     return (
         <S.CardContainer>
         <S.CardSpacer>
             <S.UserBasicInfo>
-                <S.ProfileImage />
+                <S.ProfileImage src={src} />
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <S.UserTitle>{name}</S.UserTitle>
                     <S.UserDescription>{description}</S.UserDescription>
